@@ -17,7 +17,7 @@
     }
     /* Background image */
     .bg-cyber {
-      background-image: url('https://raw.github.com/rGouli/rgouli.github.io/blob/main/3.jpg');
+      background-image: url('https://raw.githubusercontent.com/rGouli/rgouli.github.io/main/3.jpg');
       background-attachment: fixed;
       background-size: cover;
       background-blend-mode: overlay;
@@ -93,6 +93,27 @@
     section {
       padding: 5rem 2rem;
     }
+    /* Responsive navbar */
+    @media (max-width: 767px) {
+      nav .flex.items-center.space-x-6 {
+        display: none;
+      }
+      nav .hamburger {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      nav .menu-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #F9FAFB;
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -107,8 +128,8 @@
   <!-- Navbar -->
   <nav class="fixed top-0 w-full bg-[#F9FAFB] bg-opacity-95 z-50 shadow-sm" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <div class="flex items-center">
+      <div class="flex justify-between h-16 items-center">
+        <div>
           <span class="text-2xl font-bold text-[#008080]">Rishi Gouli</span>
         </div>
         <div class="flex items-center space-x-6">
@@ -118,6 +139,7 @@
           <a href="#projects" class="text-[#333333] hover:text-[#008080] cyber-link">Projects</a>
           <a href="#experience" class="text-[#333333] hover:text-[#008080] cyber-link">Experience</a>
           <a href="#contact" class="text-[#333333] hover:text-[#008080] cyber-link">Contact</a>
+          <div class="hamburger md:hidden">☰</div>
         </div>
       </div>
     </div>
@@ -125,20 +147,20 @@
 
   <!-- Hero Section -->
   <section id="intro" class="min-h-screen flex items-center justify-center text-center" data-aos="zoom-in">
-    <div class="max-w-4xl mx-auto px-4">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <img src="/path/to/profile.jpg" alt="Rishi Gouli Profile Picture" class="profile-pic mx-auto">
-      <h1 class="text-4xl sm:text-6xl font-bold text-[#008080] mb-4">Rishi Gouli</h1>
-      <p class="text-xl sm:text-2xl text-[#333333] mb-6 font-semibold">Aspiring Cybersecurity Professional & IT Enthusiast</p>
-      <p class="text-lg text-[#333333] max-w-2xl mx-auto">Building secure digital futures through expertise, innovation, and integrity.</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[#008080] mb-4">Rishi Gouli</h1>
+      <p class="text-xl sm:text-2xl md:text-3xl text-[#333333] mb-6 font-semibold">Aspiring Cybersecurity Professional & IT Enthusiast</p>
+      <p class="text-lg sm:text-xl md:text-2xl text-[#333333] max-w-2xl mx-auto">Building secure digital futures through expertise, innovation, and integrity.</p>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-[#008080] mb-6">About Me</h2>
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#008080] mb-6">About Me</h2>
       <div class="cyber-card" data-aos="fade-up" data-aos-delay="100">
-        <p class="text-lg text-[#333333] font-medium max-w-3xl mx-auto">
+        <p class="text-lg sm:text-xl text-[#333333] font-medium max-w-3xl mx-auto">
           I’m a dedicated cybersecurity enthusiast with a mission to protect digital environments through technical expertise and collaborative problem-solving. With a Bachelor’s in IT and advanced training in network security, I bring a global perspective shaped by extensive travels and a commitment to ethical, innovative solutions.
         </p>
       </div>
@@ -147,11 +169,11 @@
 
   <!-- Skills Section -->
   <section id="skills" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-[#008080] mb-6">Skills</h2>
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#008080] mb-6">Skills</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div class="cyber-card" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-xl font-semibold text-[#008080] mb-4">Technical Skills</h3>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#008080] mb-4">Technical Skills</h3>
           <ul class="text-[#333333] space-y-3 text-left">
             <li><i class="fas fa-shield-alt text-[#008080] mr-2"></i>Cybersecurity: Nmap, Wireshark, SQL injection, XSS mitigation</li>
             <li><i class="fas fa-network-wired text-[#008080] mr-2"></i>Networking: TCP/IP, DNS, DHCP, LAN/WAN, router/switch configuration</li>
@@ -161,7 +183,7 @@
           </ul>
         </div>
         <div class="cyber-card" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-semibold text-[#008080] mb-4">Soft Skills</h3>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#008080] mb-4">Soft Skills</h3>
           <ul class="text-[#333333] space-y-3 text-left">
             <li><i class="fas fa-lightbulb text-[#008080] mr-2"></i>Creative problem-solving with case study analysis</li>
             <li><i class="fas fa-comments text-[#008080] mr-2"></i>Exceptional communication and empathy</li>
@@ -176,22 +198,22 @@
 
   <!-- Projects Section -->
   <section id="projects" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-[#008080] mb-6">Projects & Case Studies</h2>
-      <div class="space-y-6">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#008080] mb-6">Projects & Case Studies</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <article class="cyber-card" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-xl font-semibold text-[#008080] mb-2">Try Hack Me Labs</h3>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#008080] mb-2">Try Hack Me Labs</h3>
           <p class="text-[#333333] mb-3">Completed 50% of Cyber Security 101, mastering network enumeration and vulnerability scanning with Nmap and Wireshark.</p>
           <p class="text-sm text-[#666666] mb-3">Tech: Nmap, Wireshark</p>
           <a href="https://tryhackme.com/p/rishiGouli" class="cyber-btn">View Profile</a>
         </article>
         <article class="cyber-card" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-semibold text-[#008080] mb-2">Process Optimization at Snell’s Vending</h3>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#008080] mb-2">Process Optimization at Snell’s Vending</h3>
           <p class="text-[#333333] mb-3">Streamlined inventory management processes at major construction sites, improving efficiency and ensuring WHS compliance through team collaboration.</p>
           <p class="text-sm text-[#666666] mb-3">Skills: Process optimization, Teamwork</p>
         </article>
         <article class="cyber-card" data-aos="fade-up" data-aos-delay="300">
-          <h3 class="text-xl font-semibold text-[#008080] mb-2">Network Configuration Practice (CCNA)</h3>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#008080] mb-2">Network Configuration Practice (CCNA)</h3>
           <p class="text-[#333333] mb-3">Configured network devices (routers, switches) and implemented security protocols during CCNA coursework, enhancing practical networking skills.</p>
           <p class="text-sm text-[#666666] mb-3">Tech: Cisco Packet Tracer, TCP/IP</p>
         </article>
@@ -201,31 +223,31 @@
 
   <!-- Experience & Education Section -->
   <section id="experience" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-[#008080] mb-6">Experience & Education</h2>
-      <div class="space-y-6">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#008080] mb-6">Experience & Education</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <article class="cyber-card text-left" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-xl font-semibold text-[#008080] mb-2">Vending Machine Attendant, Snell’s Vending</h3>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#008080] mb-2">Vending Machine Attendant, Snell’s Vending</h3>
           <p class="text-sm text-[#666666] mb-2">2023 – Present</p>
           <p class="text-[#333333]">Manage inventory at major construction sites (e.g., M7-M12, Western Sydney Airport), ensuring WHS compliance and process optimization.</p>
         </article>
         <article class="cyber-card text-left" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-semibold text-[#008080] mb-2">Desktop Support Officer, Abacus Rent IT</h3>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#008080] mb-2">Desktop Support Officer, Abacus Rent IT</h3>
           <p class="text-sm text-[#666666] mb-2">2021</p>
           <p class="text-[#333333]">Provided user support and troubleshooting during the Electoral Commission project, enhancing system reliability.</p>
         </article>
         <article class="cyber-card text-left" data-aos="fade-up" data-aos-delay="300">
-          <h3 class="text-xl font-semibold text-[#008080] mb-2">Bachelor of IT, King’s Own Institute</h3>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#008080] mb-2">Bachelor of IT, King’s Own Institute</h3>
           <p class="text-sm text-[#666666] mb-2">2022</p>
           <p class="text-[#333333]">Specialized in network security and IT infrastructure.</p>
         </article>
         <article class="cyber-card text-left" data-aos="fade-up" data-aos-delay="400">
-          <h3 class="text-xl font-semibold text-[#008080] mb-2">Advanced Diploma in Network Security, Australian Harbour International College</h3>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#008080] mb-2">Advanced Diploma in Network Security, Australian Harbour International College</h3>
           <p class="text-sm text-[#666666] mb-2">2019</p>
           <p class="text-[#333333]">Focused on cybersecurity practices and network management.</p>
         </article>
         <article class="cyber-card text-left" data-aos="fade-up" data-aos-delay="500">
-          <h3 class="text-xl font-semibold text-[#008080] mb-2">Diploma in IT Networking, Australian Harbour International College</h3>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#008080] mb-2">Diploma in IT Networking, Australian Harbour International College</h3>
           <p class="text-sm text-[#666666] mb-2">2019</p>
           <p class="text-[#333333]">Developed foundational skills in network configuration and management.</p>
         </article>
@@ -235,9 +257,9 @@
 
   <!-- Contact Section -->
   <section id="contact" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-[#008080] mb-6">Contact Me</h2>
-      <p class="text-lg text-[#333333] font-bold mb-6">Let’s connect to secure the digital future.</p>
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#008080] mb-6">Contact Me</h2>
+      <p class="text-lg sm:text-xl font-bold mb-6">Let’s connect to secure the digital future.</p>
       <div class="flex flex-wrap justify-center gap-8 mb-6">
         <div>
           <a href="https://www.linkedin.com/in/rishi-gouli-866a1b133" class="cyber-btn cyber-card">LinkedIn</a>
@@ -262,7 +284,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#F9FAFB] py-6 text-center">
+  <footer class="bg-[#F9FAFB] py-6 text-center px-4 sm:px-6 lg:px-8">
     <p class="text-[#333333] text-sm">© 2025 Rishi Gouli. All rights reserved.</p>
     <div class="flex justify-center space-x-4 mt-2">
       <a href="https://www.linkedin.com/in/rishi-gouli-866a1b133" class="text-[#008080] hover:text-[#005555]"><i class="fab fa-linkedin"></i></a>
@@ -271,7 +293,7 @@
     </div>
   </footer>
 
-  <!-- JavaScript for Smooth Scrolling -->
+  <!-- JavaScript for Smooth Scrolling and Mobile Menu -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -279,8 +301,25 @@
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
+        // Close mobile menu if open
+        const menu = document.querySelector('nav .menu-open');
+        if (menu && window.innerWidth <= 767) menu.style.display = 'none';
       });
     });
+
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        const menu = document.querySelector('nav .flex.items-center.space-x-6');
+        if (menu.style.display === 'none' || !menu.style.display) {
+          menu.style.display = 'flex';
+          menu.classList.add('menu-open');
+        } else {
+          menu.style.display = 'none';
+        }
+      });
+    }
   </script>
 </body>
 </html>

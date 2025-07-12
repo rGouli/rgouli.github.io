@@ -10,12 +10,60 @@
       background: #0D1117;
       color: #E6E6E6;
       font-family: 'Inter', sans-serif;
-      position: relative;
       overflow-x: hidden;
     }
-    /* Background with Matrix code graphic */
-    .bg-cyber {
-      background-image: url('https://images.unsplash.com/photo-1639325468676-5145f2f1d1e9');
+    /* Section-specific backgrounds with cybersecurity images */
+    .bg-intro {
+      background-image: url('https://www.freepik.com/free-photos-vectors/cyber-security
+https://downloadscdn6.freepik.com/1048/19/18106.jpg?filename=3d-internet-secuirty-badge.jpg&token=exp=1752285409~hmac=d6e066cf76907956ee09381ab2e6da28');
+      background-attachment: fixed;
+      background-size: cover;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0.08;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      filter: blur(3px);
+    }
+    .bg-about {
+      background-image: url('https://www.freepik.com/free-photos-vectors/cyber-security/2
+https://downloadscdn6.freepik.com/1419/3/2804.jpg?filename=online-security-dark-background-3d-illustration.jpg&token=exp=1752285502~hmac=c948e9b81aa5370bd12c0165de8e5750');
+      background-attachment: fixed;
+      background-size: cover;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0.08;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      filter: blur(3px);
+    }
+    .bg-skills {
+      background-image: url('https://www.pexels.com/
+https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?cs=srgb&dl=pexels-tara-winstead-8386440.jpg&fm=jpg&_gl=1*1vfbf22*_ga*MTkwNDQzMDA3My4xNzUyMjg0ODU2*_ga_8JE65Q40S6*czE3NTIyODQ4NTYkbzEkZzEkdDE3NTIyODQ4NjUkajUxJGwwJGgw');
+      background-attachment: fixed;
+      background-size: cover;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0.08;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      filter: blur(3px);
+    }
+    .bg-projects-contact {
+      background-image: url('https://www.pexels.com/
+https://images.pexels.com/photos/9202297/pexels-photo-9202297.jpeg?cs=srgb&dl=pexels-marek-piwnicki-3907296-9202297.jpg&fm=jpg&_gl=1*o5qnke*_ga*MTkwNDQzMDA3My4xNzUyMjg0ODU2*_ga_8JE65Q40S6*czE3NTIyODQ4NTYkbzEkZzEkdDE3NTIyODUwODIkajU5JGwwJGgw');
       background-attachment: fixed;
       background-size: cover;
       background-blend-mode: overlay;
@@ -41,15 +89,27 @@
       transform: scale(1.05);
       box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
     }
-    /* Section padding */
+    /* Section styling */
     section {
       padding: 4rem 2rem;
+      position: relative;
+    }
+    /* Thick, bold blocks for Try Hack Me and ACS Skillsoft */
+    .bold-block {
+      border: 3px solid #00FFCC;
+      padding: 1.5rem;
+      border-radius: 8px;
+      background: #0D1117;
+      box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+    }
+    .bold-block h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00FFCC;
     }
   </style>
 </head>
 <body>
-  <div class="bg-cyber"></div>
-  
   <!-- Navbar -->
   <nav class="fixed top-0 w-full bg-[#0D1117] bg-opacity-90 z-50 shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,95 +129,136 @@
   </nav>
 
   <!-- Intro Section -->
-  <section id="intro" class="min-h-screen flex items-center justify-center text-center">
+  <section id="intro" class="min-h-screen flex items-center justify-center text-center relative">
+    <div class="bg-intro"></div>
     <div class="max-w-4xl mx-auto px-4">
       <h1 class="text-4xl sm:text-6xl font-bold text-[#00FFCC] mb-4">Rishi Gouli</h1>
       <p class="text-xl sm:text-2xl text-[#E6E6E6] mb-6">Aspiring Cybersecurity Professional & IT Innovator</p>
-      <p class="text-lg text-[#E6E6E6] mb-8">Securing the digital world with technical expertise, empathy, and creative problem-solving.</p>
-      <a href="#contact" class="inline-block bg-[#00FFCC] text-[#0D1117] font-semibold py-3 px-6 rounded-lg cyber-btn">Get in Touch</a>
+      <p class="text-lg text-[#E6E6E6]">Securing the digital world with technical expertise, empathy, and creative problem-solving.</p>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="bg-[#0D1117] bg-opacity-80">
+  <!-- About Me Section -->
+  <section id="about" class="bg-[#0D1117] bg-opacity-80 relative">
+    <div class="bg-about"></div>
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-[#00FFCC] mb-6">About Me</h2>
-      <ul class="text-lg text-[#E6E6E6] space-y-4 text-left">
-        <li>🔒 Passionate cybersecurity enthusiast with a Bachelor in IT, Advanced Diploma in Network Security, and Diploma in IT Networking.</li>
-        <li>🌍 Shaped by travels across Australia and internationally, bringing cultural awareness and resilience to my work.</li>
-        <li>🤝 Empathetic team player, known for clear communication and fostering positive, collaborative environments.</li>
-        <li>🚀 Committed to growth, pursuing CompTIA Security+ (2025) and OSCP (2026) certifications.</li>
-        <li>🧠 Skilled in prompt engineering, leveraging AI tools like Grok and ChatGPT to innovate solutions.</li>
-        <li>🌟 Values-driven and spiritual, ensuring ethical and conscious decision-making in all endeavors.</li>
-      </ul>
+      <div class="bold-block text-left text-[#E6E6E6]">
+        <ul class="space-y-4">
+          <li>Passionate cybersecurity enthusiast with a Bachelor in IT, Advanced Diploma in Network Security, and Diploma in IT Networking.</li>
+          <li>Shaped by travels across Australia and internationally, bringing cultural awareness and resilience to my work.</li>
+          <li>Empathetic team player, known for clear communication and fostering positive, collaborative environments.</li>
+          <li>Committed to growth, pursuing CompTIA Security+ (2025) and OSCP (2026) certifications.</li>
+          <li>Skilled in prompt engineering, leveraging AI tools like Grok and ChatGPT to innovate solutions.</li>
+          <li>Values-driven and spiritual, ensuring ethical and conscious decision-making.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="bg-[#0D1117] bg-opacity-80">
+  <section id="skills" class="bg-[#0D1117] bg-opacity-80 relative">
+    <div class="bg-skills"></div>
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-[#00FFCC] mb-6">Skills</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div>
-          <h3 class="text-xl font-semibold text-[#00FFCC] mb-2">Technical Skills</h3>
+        <div class="bold-block">
+          <h3 class="mb-2">Technical Skills</h3>
           <ul class="text-[#E6E6E6] space-y-2 text-left">
-            <li>🔐 Cybersecurity: Nmap, Wireshark, SQL injection, XSS mitigation</li>
-            <li>🌐 Networking: TCP/IP, DNS, DHCP, LAN/WAN, router/switch configuration</li>
-            <li>💻 IT Support: Azure Active Directory, Microsoft Intune, OS ticketing, hardware troubleshooting, imaging/re-imaging</li>
-            <li>📝 Programming: Python, HTML</li>
-            <li>🤖 AI: Prompt engineering for generative AI tools (Grok, ChatGPT, DeepSeek)</li>
+            <li>Cybersecurity: Nmap, Wireshark, SQL injection, XSS mitigation</li>
+            <li>Networking: TCP/IP, DNS, DHCP, LAN/WAN, router/switch configuration</li>
+            <li>IT Support: Azure Active Directory, Microsoft Intune, OS ticketing, hardware troubleshooting, imaging/re-imaging</li>
+            <li>Programming: Python, HTML</li>
+            <li>AI: Prompt engineering for generative AI tools (Grok, ChatGPT, DeepSeek)</li>
           </ul>
         </div>
-        <div>
-          <h3 class="text-xl font-semibold text-[#00FFCC] mb-2">Soft Skills</h3>
+        <div class="bold-block">
+          <h3 class="mb-2">Soft Skills</h3>
           <ul class="text-[#E6E6E6] space-y-2 text-left">
-            <li>🧩 Creative problem-solving with case study analysis</li>
-            <li>🗣️ Exceptional communication and empathy</li>
-            <li>🤝 Teamwork and process optimization</li>
-            <li>⚡ Adaptability in dynamic environments</li>
-            <li>🌟 Leadership in proposing innovative ideas</li>
+            <li>Creative problem-solving with case study analysis</li>
+            <li>Exceptional communication and empathy</li>
+            <li>Teamwork and process optimization</li>
+            <li>Adaptability in dynamic environments</li>
+            <li>Leadership in proposing innovative ideas</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="bg-[#0D1117] bg-opacity-80">
+  <!-- Projects and Experiences Section -->
+  <section id="projects" class="bg-[#0D1117] bg-opacity-80 relative">
+    <div class="bg-projects-contact"></div>
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-[#00FFCC] mb-6">Projects & Experience</h2>
-      <ul class="text-[#E6E6E6] space-y-6 text-left">
-        <li>
-          <strong class="text-[#00FFCC]">Try Hack Me Labs (2024–Present)</strong><br>
-          Completed 50% of Cyber Security 101, mastering network enumeration and vulnerability scanning with Nmap and Wireshark. View progress: <a href="https://tryhackme.com/p/rishiGouli" class="text-[#00FFCC] hover:underline cyber-btn">Try Hack Me Profile</a>.
-        </li>
-        <li>
-          <strong class="text-[#00FFCC]">Vending Machine Attendant, Snell’s Vending (Current)</strong><br>
-          Manage inventory at major construction sites (e.g., M7-M12, Western Sydney Airport), ensuring WHS compliance and optimizing processes with team collaboration.
-        </li>
-        <li>
-          <strong class="text-[#00FFCC]">Desktop Support Officer, Abacus Rent IT (2021)</strong><br>
-          Provided user support and troubleshooting during the Electoral Commission project, enhancing system reliability.
-        </li>
-        <li>
-          <strong class="text-[#00FFCC]">Network Security Design (Academic, 2022)</strong><br>
-          Designed a secure network infrastructure with routers, firewalls, and encryption protocols at King’s Own Institute.
-        </li>
-      </ul>
+      <h2 class="text-3xl font-bold text-[#00FFCC] mb-6">Projects & Experiences</h2>
+      <div class="bold-block text-left text-[#E6E6E6]">
+        <ul class="space-y-4">
+          <li>
+            <strong class="text-[#00FFCC]">Vending Machine Attendant, Snell’s Vending (Current)</strong><br>
+            Manage inventory at major construction sites (e.g., M7-M12, Western Sydney Airport), ensuring WHS compliance and optimizing processes with team collaboration.
+          </li>
+          <li>
+            <strong class="text-[#00FFCC]">Desktop Support Officer, Abacus Rent IT (2021)</strong><br>
+            Provided user support and troubleshooting during the Electoral Commission project, enhancing system reliability.
+          </li>
+          <li>
+            <strong class="text-[#00FFCC]">Network Security Design (Academic, 2022)</strong><br>
+            Designed a secure network infrastructure with routers, firewalls, and encryption protocols at King’s Own Institute.
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-[#0D1117] bg-opacity-80">
+  <!-- Try Hack Me Profile Section -->
+  <section id="tryhackme" class="bg-[#0D1117] bg-opacity-80 relative">
+    <div class="bg-projects-contact"></div>
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-[#00FFCC] mb-6">Try Hack Me Profile</h2>
+      <div class="bold-block text-left text-[#E6E6E6]">
+        <p>Completed 50% of Cyber Security 101, mastering network enumeration and vulnerability scanning with Nmap and Wireshark. View my progress: <a href="https://tryhackme.com/p/rishiGouli" class="text-[#00FFCC] hover:underline cyber-btn">Try Hack Me Profile</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACS Skillsoft Certifications Section -->
+  <section id="certifications" class="bg-[#0D1117] bg-opacity-80 relative">
+    <div class="bg-projects-contact"></div>
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-[#00FFCC] mb-6">ACS Skillsoft Certifications</h2>
+      <div class="bold-block text-left text-[#E6E6E6]">
+        <p>Actively pursuing certifications to enhance my cybersecurity expertise. View my certificates: <a href="https://acs-preview.percipio.com/profile/certificates" class="text-[#00FFCC] hover:underline cyber-btn">ACS Skillsoft Certifications</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section id="contact" class="bg-[#0D1117] bg-opacity-80 relative">
+    <div class="bg-projects-contact"></div>
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-[#00FFCC] mb-6">Contact Me</h2>
-      <p class="text-lg text-[#E6E6E6] mb-6">Let’s collaborate to secure the digital future!</p>
-      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-        <a href="https://www.linkedin.com/in/rishi-gouli-866a1b133" class="text-[#00FFCC] hover:underline cyber-btn">LinkedIn</a>
-        <a href="https://rgouli.github.io" class="text-[#00FFCC] hover:underline cyber-btn">GitHub</a>
-        <a href="https://tryhackme.com/p/rishiGouli" class="text-[#00FFCC] hover:underline cyber-btn">Try Hack Me</a>
-        <a href="https://acs-preview.percipio.com/profile/certificates" class="text-[#00FFCC] hover:underline cyber-btn">ACS Skillsoft Certifications</a>
-        <a href="mailto:catchmerisi@gmail.com" class="text-[#00FFCC] hover:underline cyber-btn">Email</a>
+      <div class="bold-block text-left text-[#E6E6E6] mb-6">
+        <p>Let’s collaborate to secure the digital future!</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bold-block">
+          <a href="https://www.linkedin.com/in/rishi-gouli-866a1b133" class="text-[#00FFCC] hover:underline cyber-btn">LinkedIn</a>
+        </div>
+        <div class="bold-block">
+          <a href="https://rgouli.github.io" class="text-[#00FFCC] hover:underline cyber-btn">GitHub</a>
+        </div>
+        <div class="bold-block">
+          <a href="https://tryhackme.com/p/rishiGouli" class="text-[#00FFCC] hover:underline cyber-btn">Try Hack Me</a>
+        </div>
+        <div class="bold-block">
+          <a href="https://acs-preview.percipio.com/profile/certificates" class="text-[#00FFCC] hover:underline cyber-btn">ACS Skillsoft Certifications</a>
+        </div>
+        <div class="bold-block">
+          <a href="mailto:catchmerisi@gmail.com" class="text-[#00FFCC] hover:underline cyber-btn">Email</a>
+        </div>
+      </div>
+      <div class="mt-6">
+        <a href="#contact" class="inline-block bg-[#00FFCC] text-[#0D1117] font-semibold py-3 px-6 rounded-lg cyber-btn">Get in Touch</a>
       </div>
     </div>
   </section>
